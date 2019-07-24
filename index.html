@@ -71,7 +71,8 @@
 
     input:focus {
         outline: none;
-        background: lightgray;
+        background: #e9e9e9;
+        color: black;
     }
 
     .phone-demo__outline {
@@ -158,6 +159,12 @@
     .sub-button {
         grid-column: 2; background-color: #fd6769; border: none; color: white; 
         font-size: 30px; font-family: 'Linotte'; padding: 20px 30px;
+
+        transition: transform 0.1s;
+    }
+    .sub-button:hover {
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
     }
 
     .sub-input {
@@ -295,10 +302,10 @@
             <div class="logo">
                 4Birds
                 <div class="bird-wire"></div>
-                <img src="bird.svg" class="bird2" style="right: 100px; animation-delay: 7s;">
-                <img src="bird.svg" class="bird2" style="right: 0px; animation-delay: 1s;">
-                <img src="bird.svg" class="bird2" style="right: -100px; animation-delay: 19s;">
-                <img src="bird.svg" class="bird2" style="right: -200px; animation-delay: 25s;">
+                <img src="bird.svg" class="bird2" style="right: 100px; animation-delay: -3s;">
+                <img src="bird.svg" class="bird2" style="right: 0px; animation-delay: -9s;">
+                <img src="bird.svg" class="bird2" style="right: -100px; animation-delay: 9s;">
+                <img src="bird.svg" class="bird2" style="right: -200px; animation-delay: 15s;">
             </div>
             <h1 class="hero-main">Fly around the world and make friends wherever you are!</h1>
             <p class="hero-description">We put you in groups of 4 —including one local— to help you socialize with a new culture.</p>
