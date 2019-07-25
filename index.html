@@ -37,7 +37,7 @@
         /* grid-auto-rows: minmax(min-content, max-content); */
         display: grid;
         grid-template-columns: 10% 800px 1fr;
-        grid-template-rows: 80px auto 80px;
+        grid-template-rows: 120px auto 80px;
     }
 
     .hero-text {
@@ -54,8 +54,8 @@
 
     .hero-description {
         font-weight: 800;
-        font-size: 40px;
-        line-height: 65px;
+        font-size: 35px;
+        line-height: 50px;
         margin-top: 10px;
         margin-bottom: 50px;
     }
@@ -69,34 +69,41 @@
         align-self: flex-end;
     }
 
-    .phone-demo {
-        grid-column: 3;
-        height: 100%;
-        grid-row: 2 / span 1;
-        display: grid;
-        justify-items: center;
-        position: relative;
-    }
-
-    .phone {
-        position: relative;
-        height: 100%;
-        display: grid;
-        justify-items: center;
-    }
-
     input:focus {
         outline: none;
         background: #e9e9e9;
         color: black;
     }
 
+    .phone-demo {
+        grid-column: 3;
+        height: 80%;
+        margin: 10% 0;
+        grid-row: 2 / span 1;
+        display: grid;
+        justify-items: center;
+        position: relative;
+    }
+
     .phone-demo__outline {
-        height: 500px;
+        height: 100%;
         position: absolute;
         object-fit: contain;
 
         z-index: 10;
+    }
+
+    .phone-demo__image {
+        animation-name: fadein;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        opacity: 0;
+
+        object-fit: contain;
+        /* width: 40%; */
+        height: 88%;
+
+        position: absolute; top:40px;
     }
 
     @keyframes fadein {
@@ -134,19 +141,6 @@
         82% { transform: translate(0, 0) scaleX(1) }
         
         
-    }
-
-    .phone-demo__image {
-        animation-name: fadein;
-        animation-duration: 12s;
-        animation-iteration-count: infinite;
-        opacity: 0;
-
-        object-fit: contain;
-        /* width: 40%; */
-        height: 440px;
-
-        position: absolute; top:30px;
     }
 
     .bird2 {
@@ -330,6 +324,7 @@
 
         .hero-text {
             margin-bottom: 30px;
+            padding: 0px;
         }
 
         .phone-demo {
@@ -436,7 +431,7 @@
                     novalidate>
                     <input type="email" value="" name="EMAIL" class="sub-input" placeholder="Enter your email">
                     <!-- IGNORE --><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_81fd7c4cdc598c9636702c4b8_ed20990b33" tabindex="-1" value=""></div>
-                    <input type="submit" value="Stay connected" name="subscribe" class="sub-button">
+                    <input type="submit" value="Get Notified" name="subscribe" class="sub-button">
                 </form>
         </div>
         
