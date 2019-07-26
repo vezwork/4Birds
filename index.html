@@ -33,6 +33,10 @@
         <meta name="twitter:description" content="We put three travellers and one local in a group, so you can chat, meet up, and explore authentic spots in your new destination.">
         <meta name="twitter:image" content="https://4birds.world/thumbnail.png">
         <style>
+            :root {
+                --bg-color: #fafaf5;
+            }
+
             @font-face {
                 font-family: 'Linotte';
                 src: url('fonts/Linotte-Bold.otf') format('opentype');
@@ -62,7 +66,7 @@
                 height: 100%;
                 width: 100%;                
                 position: relative;
-                background-color: #fafaf5;
+                background-color:  var(--bg-color);
                 /* grid-auto-rows: minmax(min-content, max-content); */
                 display: grid;
                 grid-template-columns: 10% 800px 1fr;
@@ -270,16 +274,32 @@
             .info-section__right__blurb {
                 font-size: 20px;
                 text-align: center;
-                opacity: 0;
+                opacity: 1;
                 transition: opacity 0.3s ease-in-out;
             }
 
-            .info-section__right:hover .info-section__right__blurb {
-                opacity: 1;
+            .info-section__app-icon:hover {
+                transform: scale(1.05) rotate(180deg);
             }
 
-            .info-section__right:hover .info-section__app-icon {
-                transform: scale(1.05);
+            .footer {
+                background-color:  var(--bg-color);
+                width: calc(100% - 60px);
+                display: grid;
+                text-align: center;
+                padding: 20px 30px;
+                /* grid-template-columns: 10% 480px 1fr; */
+            }
+
+            .footer__text {
+                color: black;
+                /* grid-column: 2 / span 1; */
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .footer__text a {
+                color: inherit;
             }
 
             
@@ -480,7 +500,7 @@
                 <h2 class="info-section__caption">A part of a flock, wherever you go.
                     </h2>
                 <p class="info-section__description">
-                    4Birds provides a way to connect, exchange cultures, and make each other feel welcome in a new place.
+                    4Birds connects groups of four, in order to exchange cultures, and make each other feel welcome in a new place.
                     <br>
                     <br>
                     Because we're all travellers, we're all locals, and we're all people.       
@@ -494,6 +514,9 @@
                     <p class="info-section__right__blurb">Coming soon to your device.</p>
                 </div>
             </div>
+        </div>
+        <div class="footer">
+            <p class="footer__text">We're a diverse team of five looking to help people connect. Send us a carrier pigeon <a href="mailto:4birds.world@gmail.com">here.</a></p>
         </div>
     </body>
 </html>
