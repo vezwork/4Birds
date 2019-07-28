@@ -302,6 +302,21 @@
                 color: inherit;
             }
 
+            .sponsor-logos {
+                margin: 0 auto;
+                width: 380px;
+            }
+            .sponsor-logo {
+                float: left;
+                margin: 0 20px;
+                filter:grayscale(100%);
+                transform: scale(1, 1);
+                transition: filter 0.2s, transform 0.2s;
+            }
+            .sponsor-logo:hover {
+                filter:grayscale(0%);
+                transform: scale(1.1, 1.1);
+            }
             
 
             @media (max-width: 1650px) {
@@ -351,6 +366,15 @@
                 .bird2 {
                     height: 60px; 
                     top: -38px; 
+                }
+
+                .sponsor-logo {
+                    float:none;
+                    width: 100px;
+                }
+                .sponsor-logos {
+                    margin: 0 auto;
+                    width: 140px;
                 }
             } 
             
@@ -515,7 +539,13 @@
                 </div>
             </div>
         </div>
+        
         <div class="footer">
+            <p>Partners</p>
+            <div class="sponsor-logos">
+                <a href="https://www.inacademy.eu/portugal/"><img class="sponsor-logo" height="150" width="150" src="EIA-LOGO.svg" alt="EIA logo"></a>
+                <a href="https://goo.gl/maps/tq1xu54t9JUbPh3E8"><img class="sponsor-logo" height="127" width="150" src="querotenocais_logo.png" alt="Quero Te No Cais logo"></a>
+            </div>
             <p class="footer__text">We're a diverse team of five looking to help people connect. Send us a carrier pigeon <a href="mailto:4birds.world@gmail.com">here.</a></p>
         </div>
     </body>
